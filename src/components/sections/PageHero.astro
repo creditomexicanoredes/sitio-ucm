@@ -4,7 +4,7 @@ interface Props {
   title: string;
   titleSerif?: string;
   description?: string;
-  image: string;
+  image?: string;
   videoSrc?: string;
   breadcrumb?: Array<{ label: string; href: string }>;
   cta?: { label: string; href: string };
@@ -24,7 +24,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative w-full overflow-hidden h-screen">
+<section class="relative w-full overflow-hidden h-screen" style="background:#020b16;">
   {
     videoSrc ? (
       <video
@@ -36,13 +36,13 @@ const {
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
-    ) : (
+    ) : image ? (
       <img
         src={image}
         alt={title}
         class="absolute inset-0 w-full h-full object-cover"
       />
-    )
+    ) : null
   }
 
   <div
