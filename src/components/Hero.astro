@@ -1,14 +1,13 @@
 ---
 interface Props {
   videoSrc?: string;
-  imageSrc?: string;
 }
-const { videoSrc, imageSrc = "/img/hero-soluciones.webp" } = Astro.props;
+const { videoSrc } = Astro.props;
 ---
 
 <section
   class="relative w-full overflow-hidden"
-  style="height: 100vh; min-height: 620px;"
+  style="height: 100vh; min-height: 620px; background: #020b16;"
 >
   {
     videoSrc ? (
@@ -21,13 +20,7 @@ const { videoSrc, imageSrc = "/img/hero-soluciones.webp" } = Astro.props;
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
-    ) : (
-      <img
-        src={imageSrc}
-        alt="UCM Hero"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-    )
+    ) : null
   }
 
   <div
@@ -44,39 +37,16 @@ const { videoSrc, imageSrc = "/img/hero-soluciones.webp" } = Astro.props;
         <h1
           class="leading-[0.85] tracking-tighter mb-6 text-[#ffffff] font-medium text-[clamp(2.5rem,6vw,4.5rem)]"
         >
-          Invertir es <span
-            class="serif-italic text-white font-medium text-[clamp(3rem,7vw,5.25rem)]"
-            >crecer</span
-          >
-          <br />
-          Crecer, es hacerlo <span
-            class="serif-italic font-medium text-[clamp(3rem,7vw,5.25rem)]"
-            >juntos</span
-          >
+          Detrás de cada
+          <span class="block">inversión hay una</span>
+          <span class="block">
+            historia que
+            <span class="serif-italic text-[clamp(3rem,7vw,5.25rem)]">
+              cuidamos
+            </span>
+          </span>
         </h1>
-        <p
-          class="mb-8 leading-relaxed text-white text-[clamp(1rem,2vw,1rem)] max-w-[600px]"
-        >
-          Diseñamos estrategias sólidas y trasparentes de crecimiento financiero
-          junto a una comunidad que construye su futuro contigo.
-        </p>
-        <div
-          class="flex flex-wrap gap-4 animate-fade-in-up animate-duration-900 animate-ease-out animate-delay-300"
-        >
-          <!-- <a href="#nosotros" class="btn-primary">Conócenos</a> -->
-          <a
-            href="https://wa.me/5215529401288"
-            class="btn-secondary"
-            target="_blank"
-            ><span class="pr-1">Contactar a un asesor</span> &gt;
-          </a>
-        </div>
       </div>
-    </div>
-    <!-- Texto ocultado temporalmente (preservado en el código) -->
-    <div class="absolute bottom-0 mx-32 my-20" style="display:none;">
-      <p class="text-white text-sm font-medium">OSWALDO SÁNCHEZ</p>
-      <p class="text-white text-sm font-medium">EX JUGADOR DE FÚTBOL</p>
     </div>
   </div>
 </section>
