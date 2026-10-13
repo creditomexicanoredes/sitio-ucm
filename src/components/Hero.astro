@@ -1,8 +1,9 @@
 ---
 interface Props {
   videoSrc?: string;
+  imageSrc?: string;
 }
-const { videoSrc } = Astro.props;
+const { videoSrc, imageSrc } = Astro.props;
 ---
 
 <section
@@ -20,6 +21,12 @@ const { videoSrc } = Astro.props;
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
+    ) : imageSrc ? (
+      <img
+        src={imageSrc}
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
     ) : null
   }
 
