@@ -26,16 +26,6 @@ export const financialDocumentGroups: FinancialDocumentGroup[] = [
     ],
   },
   {
-    title: "Información Financiera",
-    titleSerif: "Anual",
-    documents: [
-      { label: "31 de diciembre de 2020 y 2021", href: "https://drive.google.com/file/d/1KGoQ96_L49Pu9clUfXaFTS-asCPmygst/view?usp=drive_link" },
-      { label: "31 de diciembre de 2022 y 2023", href: "https://drive.google.com/file/d/11MdN0K5voiXsy0VqS1m7fsP-pf1aNaFB/view?usp=drive_link" },
-      { label: "31 de diciembre de 2023 y 2024", href: "https://drive.google.com/file/d/1oIX8eajBHpwcn53ZPsTKot0MBcOGp-ag/view?usp=drive_link" },
-      { label: "31 de diciembre de 2024 y 2025", href: "https://drive.google.com/file/d/1e6ZSAK3Rm4UO4FGntJF4dU0aNH-EcMmA/view?usp=sharing" },
-    ],
-  },
-  {
     title: "Razones",
     titleSerif: "Financieras",
     documents: [
